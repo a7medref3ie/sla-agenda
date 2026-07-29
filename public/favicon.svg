@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4A843;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6C3FA0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="20" fill="url(#grad)"/>
+  <text x="50" y="42" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">أجندة</text>
+  <text x="50" y="62" text-anchor="middle" fill="white" font-family="Arial" font-size="11" font-weight="bold">قضايا الدولة</text>
+  <path d="M30 75 L70 75" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="35" cy="25" r="4" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="65" cy="25" r="3" fill="rgba(255,255,255,0.2)"/>
+</svg>

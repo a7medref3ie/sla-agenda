@@ -1,0 +1,231 @@
+/* ── Cases Styles ── */
+.cases-filters {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.filter-search {
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.filter-group .form-select {
+  width: auto;
+  min-width: 140px;
+}
+
+/* Cases Grid */
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: var(--space-5);
+}
+
+/* Case Card */
+.case-card {
+  padding: var(--space-5);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.case-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.case-number-badge {
+  font-size: var(--font-sm);
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.case-card-subject {
+  font-size: var(--font-base);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.case-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
+}
+
+.meta-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-xs);
+}
+
+.meta-label {
+  color: var(--text-muted);
+  min-width: 80px;
+  font-weight: 600;
+}
+
+.meta-value {
+  color: var(--text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.case-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-light);
+}
+
+.case-card-actions {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.case-card-actions .btn-icon {
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.case-card-actions .btn-icon:hover {
+  color: var(--accent-gold);
+  background: var(--bg-hover);
+}
+
+.case-card-actions .btn-icon.text-danger:hover {
+  color: var(--danger);
+  background: var(--danger-bg);
+}
+
+.priority-indicator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 32px 32px 0;
+  border-color: transparent var(--danger) transparent transparent;
+  transform: rotate(90deg);
+}
+
+/* Case Detail Modal */
+.case-detail-modal {
+  max-width: 750px;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.detail-item.full-width {
+  grid-column: 1 / -1;
+}
+
+.detail-label {
+  font-size: var(--font-xs);
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.detail-value {
+  font-size: var(--font-sm);
+  color: var(--text-primary);
+}
+
+.detail-facts {
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+/* AI Summary */
+.ai-summary-section {
+  margin-top: var(--space-6);
+  padding: var(--space-5);
+  background: rgba(212, 168, 67, 0.05);
+  border: 1px solid rgba(212, 168, 67, 0.15);
+  border-radius: var(--border-radius-md);
+}
+
+.ai-summary-section h3 {
+  font-size: var(--font-base);
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-bottom: var(--space-4);
+}
+
+.ai-summary-content {
+  font-family: var(--font-family);
+  font-size: var(--font-sm);
+  line-height: 1.8;
+  color: var(--text-secondary);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background: none;
+  margin: 0;
+}
+
+.ai-summary-loading {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--accent-gold);
+  font-size: var(--font-sm);
+  padding: var(--space-4);
+}
+
+@media (max-width: 768px) {
+  .cases-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cases-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-group {
+    flex-wrap: wrap;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+}

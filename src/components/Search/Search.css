@@ -1,0 +1,234 @@
+/* ── Search Styles ── */
+.search-box {
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  position: relative;
+}
+
+.search-input-icon {
+  color: var(--accent-gold);
+  min-width: 22px;
+}
+
+.search-main-input {
+  flex: 1;
+  padding: var(--space-4) var(--space-5);
+  background: var(--bg-tertiary);
+  border: 2px solid var(--border-light);
+  border-radius: var(--border-radius-lg);
+  color: var(--text-primary);
+  font-size: var(--font-base);
+  font-family: var(--font-family);
+  transition: all var(--transition-base);
+  direction: rtl;
+}
+
+.search-main-input:focus {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 4px rgba(212, 168, 67, 0.1);
+}
+
+.search-main-input::placeholder {
+  color: var(--text-muted);
+}
+
+.search-clear {
+  position: absolute;
+  left: 110px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+  background: none;
+  border: none;
+}
+
+.search-clear:hover {
+  color: var(--text-primary);
+}
+
+.search-filters {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  margin-top: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.search-filter-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+}
+
+.search-tabs {
+  display: flex;
+  background: var(--bg-tertiary);
+  border-radius: var(--border-radius-md);
+  padding: 3px;
+}
+
+.search-tab {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-xs);
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-family);
+}
+
+.search-tab.active {
+  background: var(--gradient-gold);
+  color: var(--text-inverse);
+}
+
+.search-tab:hover:not(.active) {
+  color: var(--accent-gold);
+}
+
+/* Results */
+.search-results-header {
+  margin-bottom: var(--space-5);
+}
+
+.search-results-header h2 {
+  font-size: var(--font-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+}
+
+.results-section {
+  margin-bottom: var(--space-6);
+}
+
+.results-section-title {
+  font-size: var(--font-base);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.results-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.result-card {
+  padding: var(--space-5);
+  transition: all var(--transition-base);
+}
+
+.result-card:hover {
+  transform: translateX(-4px);
+}
+
+.result-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.result-case-number {
+  font-weight: 700;
+  color: var(--accent-gold);
+  font-size: var(--font-base);
+}
+
+.result-subject {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.result-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  font-size: var(--font-xs);
+  color: var(--text-muted);
+}
+
+.result-facts {
+  font-size: var(--font-xs);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-top: var(--space-3);
+}
+
+.result-decision {
+  font-size: var(--font-xs);
+  color: var(--success);
+  margin-top: var(--space-2);
+}
+
+.search-highlight {
+  background: rgba(212, 168, 67, 0.25);
+  color: var(--accent-gold-light);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+/* Suggestions */
+.search-suggestions {
+  margin-top: var(--space-6);
+}
+
+.suggestions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--space-3);
+}
+
+.suggestion-chip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  border: none;
+  font-family: var(--font-family);
+}
+
+.suggestion-chip:hover {
+  color: var(--accent-gold);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .search-input-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .search-main-input {
+    width: 100%;
+  }
+
+  .search-filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

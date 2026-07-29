@@ -112,7 +112,10 @@ export default function HomePage({ cases, sessions, theme, onToggleTheme }) {
       </header>
 
       {/* 🚀 Full-Width Visual Hero Banner Section */}
-      <section className="hero-full-banner">
+      <section
+        className="hero-full-banner"
+        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/hero_full_width_bg.jpg)` }}
+      >
         <div className="hero-banner-overlay">
           <div className="hero-banner-content">
             <div className="landing-hero-pill">
@@ -185,7 +188,7 @@ export default function HomePage({ cases, sessions, theme, onToggleTheme }) {
         <div className="glass-card showcase-inner-card">
           <div className="showcase-visual-col">
             <img
-              src="public/images/court_digital_agenda.png"
+              src={`${import.meta.env.BASE_URL}images/court_digital_agenda.png`}
               alt="الأجندة القضائية"
               className="showcase-img"
             />

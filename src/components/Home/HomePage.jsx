@@ -185,7 +185,7 @@ export default function HomePage({ cases, sessions, theme, onToggleTheme }) {
         <div className="glass-card showcase-inner-card">
           <div className="showcase-visual-col">
             <img
-              src="/images/court_digital_agenda.png"
+              src="/images/court_digital_agenda.jpg"
               alt="الأجندة القضائية"
               className="showcase-img"
             />
